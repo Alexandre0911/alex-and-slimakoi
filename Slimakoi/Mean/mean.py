@@ -1,6 +1,9 @@
+import os
 from math import sqrt
 
-table = [int(item) for item in open("data.txt").read().split(", ")]
+path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data.txt")
+
+table = [int(item) for item in open(path).read().split(", ")]
 
 mean = int(sum(table) / len(table))
 print(f"Mean: {mean}")
